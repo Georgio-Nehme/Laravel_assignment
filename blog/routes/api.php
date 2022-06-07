@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\palindromeController;
+use App\Http\Controllers\secondsCounter;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,3 +22,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::get('/palindrome', [palindromeController::class, 'countPalindromes'])->name("count-palindromes");
+
+Route::get('/secondsCounter', [secondsCounter::class, 'countSeconds'])->name("count-seconds");
